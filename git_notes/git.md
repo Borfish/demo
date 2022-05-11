@@ -32,5 +32,25 @@ git reset --hard HEAD^：回到上一个版本
 
 ### 远程仓库
 
+第一步，新建一个远程仓库，按照github的指示运行代码`git remote add origin https://github.com/Borfish/demo.git`，origin代表远程仓库名字。
+
+第二步，上传至仓库，`git push -u origin master`，把本地库内容推送到远程库上，用`git push`命令，实际上是把当前分支`master`推送到远程。
+
+由于远程库是空的，我们第一次推送`master`分支时，加上了`-u`参数，Git不但会把本地的`master`分支内容推送的远程新的`master`分支，还会把本地的`master`分支和远程的`master`分支关联起来，在以后的推送或者拉取时就可以简化命令。
+
+从现在起，只要本地作了提交，就可以通过命令：
+
+```
+$ git push origin master
+```
+
+把本地`master`分支的最新修改推送至GitHub。
+
+`git remote -v`：查看远程库信息。
+
+`git remote rm <name>`：删除名字为name的远程库
+
+`git clone`：从远程仓库上克隆出一个本地库，用ssh和http都可以，但是ssh最快
+
 
 
