@@ -18,3 +18,19 @@ git reset --hard HEAD^：回到上一个版本
 
 ### 基本概念
 
+**工作区**：电脑中的目录就是工作区
+
+**版本库**：版本库里存了很多东西，其中最重要的就是称为stage（或者叫index）的暂存区，还有Git为我们自动创建的第一个分支`master`，以及指向`master`的一个指针叫`HEAD`。![git-repo](https://www.liaoxuefeng.com/files/attachments/919020037470528/0)	     
+
+​		git add的时候是吧文件修改添加到暂存区，git commit是提交到当前分支。同时，git跟踪的是修改，而非文件，如果修改过后没有add就不会commit到仓库中
+
+​	`git checkout -- file`：把readme.txt文件在工作区的修改全部撤回
+
+​	`git reset HEAD <file>`：把暂存区的修改撤销掉，重新放回工作区
+
+​	`rm file`：删除工作区file文件	`git rm file`从版本库中删除文件	如果工作区删错了可以用`git checkout -- file` 恢复该文件
+
+### 远程仓库
+
+
+
